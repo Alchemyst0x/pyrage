@@ -5,7 +5,6 @@ ifeq ($(OS), Windows_NT)
 	VENV_BIN=$(VENV)/Scripts
 endif
 
-
 .PHONY: all
 all:
 	@echo "Run my targets individually!"
@@ -33,6 +32,10 @@ dist: dist-pyrage dist-pyrage-stubs
 .PHONY: dist-pyrage
 dist-pyrage: env
 	docker run --rm -v $(shell pwd):/io ghcr.io/pyo3/maturin build --release --sdist --strip --out dist
+
+.PHONY: dist-pyrage-macos
+dist-pyrage-macos: env
+	$(VENV_BIN)/maturin build --release --target universal2-apple-darwin --out dist
 
 .PHONY: dist-pyrage-stubs
 dist-pyrage-stubs: env

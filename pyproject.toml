@@ -4,8 +4,19 @@ build-backend = "maturin"
 
 [project]
 name = "pyrage"
+version = "1.2.1"
+description = "Python bindings for rage (age in Rust)"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "William Woodruff", email = "william@yossarian.net" }]
 classifiers = [
+    "Programming Language :: Python",
     "Programming Language :: Rust",
     "Operating System :: POSIX :: Linux",
 ]
 requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://pypi.org/project/pyrage/"
+Issues = "https://github.com/woodruffw/pyrage/issues"
+Source = "https://github.com/woodruffw/pyrage"

@@ -16,7 +16,7 @@ classifiers = [
   "Typing :: Stubs Only",
 ]
 dependencies = ["pyrage>=1.2.0,<2.0"]
-requires-python = ">= 3.8"
+requires-python = ">=3.8"
 
 [project.urls]
 Homepage = "https://pypi.org/project/pyrage/"
@@ -24,4 +24,4 @@ Issues = "https://github.com/woodruffw/pyrage/issues"
 Source = "https://github.com/woodruffw/pyrage/tree/main/pyrage-stubs"
 
 [tool.setuptools.package-data]
-"*" = ["*.pyi"]
+"pyrage" = ["*.pyi", "py.typed"]
